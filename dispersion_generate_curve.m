@@ -1,11 +1,28 @@
-function dispersion_generate_curve
+function dispersion_generate_curve (npt,dt,C0,a,name)
 close all
 clc
-npt=2000;           % number of signal points
-dt = 3.3e-7;       % time interval of the signal
-C0=5000;    %   wave speed of the bar 
-a=10e-3;   %   radius of the bar
-name = 'name_of_the_mat_file.mat';
+% npt=2000;           % number of signal points
+% dt = 3.3e-7;       % time interval of the signal
+% C0=5000;    %   wave speed of the bar 
+% a=10e-3;   %   radius of the bar
+% name = 'name_of_the_mat_file.mat';
+
+if exist('npt')==0
+    npt=2000
+end
+if exist('dt')==0
+    dt=3.3e-7
+end
+if exist('C0')==0
+    C0=5000
+end
+if exist('a')==0
+    a=10e-3
+end
+if exist('name')==0
+    name='dispersion.mat'
+end
+
 
 t = 0:npt-1;
 t=t*dt;
