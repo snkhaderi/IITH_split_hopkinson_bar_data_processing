@@ -12,7 +12,7 @@ f_cutt = 300e3;
 % first coulmn time
 % second column input signal
 % third column output signal
-q = csvread('21-02-2019_velocity_25p83_trial.dat',23);   
+q = csvread('disp_check.dat',23);     %%%%%%%%%%%% change the file to be used.
 
 % Generate the dispersion curves
 dispersion_generate_curve (length(q),q(2,1)-q(1,1),C0,a,'dispersion.mat')
