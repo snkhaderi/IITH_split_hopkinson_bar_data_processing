@@ -1,4 +1,4 @@
-# dispersion_curves
+# SHPB post-processing
 ======================================
 dispersion_generate_curve.m
 ======================================
@@ -15,3 +15,15 @@ This code does the dispersion correction. i.e., push forward and pull back.
 It needs the following input: dispersion relation data generated from the above code, signal, distance and time increment. 
 The fourier time-shifted signal is given as output.
 The default ispersion relation data file name is dispersion.mat. Alternative names can also be optionally given.
+
+
+======================================
+SHPB_process.m
+======================================
+This file calculates the stress, strain and strate rate for a material. It needs the driver SHPB_main.m
+
+
+======================================
+SHPB_opt.m
+======================================
+This file calculates the error for the optimizer.
