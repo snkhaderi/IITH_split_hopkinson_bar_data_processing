@@ -5,8 +5,8 @@ function [Dispersed_signal,stressin,stressout,erate,strain] = SHPB_process(q,dis
 % % second column input signal
 % % third column output signal
     time = q(:,1);
-    q(:,2) = q(:,2)-q(1,2);
-    q(:,3) = q(:,3)-q(1,3);   
+    q(:,2) = q(:,2)-mean(q(1:100,2));
+    q(:,3) = q(:,3)-mean(q(1:100,3));   
     incident1 = dispersion(q(:,2)',distance_in, C0,a);      % may need to modify                            
     reflected1 = dispersion(q(:,2)',distance_ref, C0,a);    % may need to modify
     transmitted1 = dispersion(q(:,3)',distance_out, C0,a);  % may need to modify
