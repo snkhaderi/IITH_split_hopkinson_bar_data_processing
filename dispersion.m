@@ -1,7 +1,7 @@
 function y = dispersion(signal,distance, dt, varargin)
 
     global  f_cutt   % cut-off frequency
-
+% signal should be of even length
 %     check if a non-default file name is used for dispersion relation
     for i = 1:2:length(varargin)
     if strcmp(varargin{i},'disp_curv_file')%varargin{i}=={'disp_curv_file'}
@@ -23,7 +23,7 @@ function y = dispersion(signal,distance, dt, varargin)
     f = (0:1/length(x1):1/2)/dt;  % frequencies
 
     %  Load the dispersion relation file
-    if exist('file')==0
+    if exist('file','var')==0
         load('dispersion.mat');
     else
 
