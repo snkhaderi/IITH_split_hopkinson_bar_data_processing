@@ -17,7 +17,7 @@ function y = dispersion(signal,distance, dt, varargin)
     N = length(signal);
 
 % checking: signal should be of even length
-    if mod(N,2)=1
+    if mod(N,2)==1
         error ('signal should have even length');
     end
 
