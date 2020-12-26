@@ -27,8 +27,8 @@ Lsample = 4e-3;
 
 
 
-
-fout=[data_dir vel '.out'];
+mkdir data_dir out
+fout=[data_dir '/out/' vel '.out'];
 Abar = pi/4*(d_bar)^2;
 Values(1)=Abar;
 Values(2)=Asample;
