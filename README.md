@@ -21,15 +21,17 @@ The default ispersion relation data file name is dispersion.mat. Alternative nam
 SHPB_main.m
 ======================================
 1. Calculates the dispersion relations
-2. Loads the data file. The data file should be a csv file with three coulmns (time, input signal and output signal). 
+2. Loads the data file. data_dir is the location of the dat and vel is the name of the data file. The data file should be a csv file with three coulmns (time, input signal and output signal). 
 3. Checks for equilibrium using SHPB_opt.m and SHPB_process.m.
 4. Calculates the stress, strain and strate rate for a material using SHPB_process.m 
+5. The output is stored as a .out file in the 'out' folder in the data_dir. 
 
 
 ======================================
 SHPB_process.m
 ======================================
 This file calculates the stress, strain and strate rate for a material. It needs the driver SHPB_main.m
+The signal_start and signal_end variables have to be adjusted to match the waves overlap.
 
 
 ======================================
