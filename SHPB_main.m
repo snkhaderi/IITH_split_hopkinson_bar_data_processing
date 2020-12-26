@@ -10,14 +10,13 @@ global signal  distance_in distance_ref distance_out C0 a amp Ebar Values Asampl
 data_dir = './';
 vel = 'sample_data.dat';
 
-E = 3.5;
-amp = 100;
-a=10e-3;
-d_bar = 20e-3;
-Ebar = 217e9;
-amp=100;
-C0=5358;
-f_cutt = 300e3;
+E = 3.5;               % voltage of the wheatstone brige
+amp = 100;             % amplification used
+a=10e-3;               % bar radius
+Ebar = 217e9;          % Young's modulus of bar
+amp=100;               % Amplification use
+C0=5358;               % wave speed of bar
+f_cutt = 300e3;        % cutt-off frequency of the amplifier
 %%%%%%%%%%%%%%%%%%%%%
 Dsample=6e-3;
 Asample =  pi/4*(Dsample)^2;
@@ -32,6 +31,7 @@ mkdir([data_dir  'out'])
 fout=[data_dir '/out/' vel '.out'];
 
 
+d_bar = 2*a;
 Abar = pi/4*(d_bar)^2;
 Values(1)=Abar;
 Values(2)=Asample;
