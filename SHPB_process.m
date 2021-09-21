@@ -15,7 +15,7 @@ function [Dispersed_signal,stressin,stressout,erate,strain] = SHPB_process(q,dis
     Asample=Values(2);     %area of sample
     Lsample=Values(3);      %length of sample
 
-%     eps/signal = (1/amp/1.07/V_app)
+%     eps/signal = (2/amp/GF/V_app)
     cal = 1/amp*1000/3.5*940*1e-6;  % may need to modify
 
 
@@ -34,8 +34,8 @@ function [Dispersed_signal,stressin,stressout,erate,strain] = SHPB_process(q,dis
     pause(0.00001)
     dt=time(2)-time(1);
 
-    signal_start = 500;                              % may need to modify depending on the signal location
-    signal_end = 900 ;                               % may need to modify depending on the signal location
+    signal_start = 500  %ind_start+L1/C0/dt;                              % may need to modify depending on the signal location
+    signal_end = 900    %signal_start+2*l_st/C0/dt ;                               % may need to modify depending on the signal location
 
 
 size(incident)
