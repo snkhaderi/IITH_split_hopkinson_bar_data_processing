@@ -14,8 +14,7 @@ E = 3.5;               % voltage of the wheatstone brige
 amp = 100;             % amplification used
 a=10e-3;               % bar radius
 Ebar = 217e9;          % Young's modulus of bar
-amp=100;               % Amplification use
-C0=5358;               % wave speed of bar
+C0=5100;               % wave speed of bar
 f_cutt = 300e3;        % cutt-off frequency of the amplifier
 %%%%%%%%%%%%%%%%%%%%%
 Dsample=6e-3;
