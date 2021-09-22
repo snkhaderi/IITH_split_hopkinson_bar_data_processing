@@ -40,6 +40,12 @@ Values(3)=Lsample;
 
 % read the signal
 signal= dlmread([ data_dir vel],',',23,0);
+
+%%% read specific columns
+% signal (:,1) = dlmread([ data_dir vel],',','D31..D20000');
+% signal (:,2) = dlmread([ data_dir vel],',','E31..E20000');
+% signal (:,3) = dlmread([ data_dir vel],',','K31..K20000');
+
 % get the dispersion relation
 dispersion_generate_curve (length(signal),signal(2,1)-signal(1,1),C0,a,'dispersion.mat')
 
