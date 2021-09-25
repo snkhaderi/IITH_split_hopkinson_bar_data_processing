@@ -138,7 +138,7 @@ stress_in=(stress_in).*(1-strain)/1e6;
 % strain
 strain = -log(1-strain);
 % strain
-dlmwrite(fout,[strain' stress_out' stress_in' e_rate' dis_in dis_ref dis_tra],'-append','delimiter',',')
+dlmwrite(fout,[true strain' true stress_out' true stress_in' e_rate' dis_in dis_ref dis_tra],'-append','delimiter',',')
 
 strain = strain' ;
 stress_out = stress_out';
