@@ -119,7 +119,7 @@ figure (4)
 plot(-log(1-strain),(stress_out).*(1-strain)/1e6,'LineWidth',2)   %%%%%%%%%% stress-strain by output signal%%%%%%%%%%
 % hold on
 % plot(m(:,2)/5,m(:,5),'m','LineWidth',2)
-xlabel('Engineering strain'); ylabel('Engineering stress (MPa)')
+xlabel('True strain'); ylabel('True stress (MPa)')
 xlim([0 inf]);
 ylim([0 2000]);
 
