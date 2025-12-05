@@ -69,7 +69,7 @@ distance_out = -x(2);
 % distance_out = -0.63;
 % % % % % post process with the optimized distances or manual distance  %  
 [Dispersed_signal,stress_in,stress_out,e_rate,strain] = ...
-    SHPB_process(signal,distance_in,distance_ref,distance_out,C0,a,amp,Ebar,Values,f_cutt);
+    SHPB_process(signal,distance_in,distance_ref,distance_out,C0,a,amp,Ebar,Values,f_cutt, V_app, GF);
 
 % ===================================================================
 % ================ Plotting begins ==================================
@@ -147,6 +147,7 @@ e_rate = e_rate';
 
 close(v)
 % end
+
 
 
 
