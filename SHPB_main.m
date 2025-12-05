@@ -11,7 +11,7 @@ data_dir = './';
 vel = 'sample_data.dat';
 
 E = 3.5;               % voltage of the wheatstone brige
-amp = 100;             % amplification used
+amp = [100 100];             % amplification used for incident and transmission bars
 a=10e-3;               % bar radius
 Ebar = 217e9;          % Young's modulus of bar
 C0=5100;               % wave speed of bar
@@ -147,5 +147,6 @@ e_rate = e_rate';
 
 close(v)
 % end
+
 
 
