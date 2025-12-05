@@ -16,14 +16,15 @@ function [Dispersed_signal,stressin,stressout,erate,strain] = SHPB_process(q,dis
     Lsample=Values(3);      %length of sample
 
 %     eps/signal = (2/amp/GF/V_app)
-    cal = 1/amp*1000/3.5*940*1e-6;  % may need to modify
+%    cal = 1/amp*1000/3.5*940*1e-6;  % may need to modify
+     cal = (2./amp/GF/V_app);
 
 
 
     time = q(:,1);
-    incident = incident1*cal;   % calculate strains from signals
-    reflected = reflected1*cal;   % calculate strains from signals
-    transmitted = transmitted1*cal;   % calculate strains from signals
+    incident = incident1*cal(1);   % calculate strains from signals
+    reflected = reflected1*cal(1);   % calculate strains from signals
+    transmitted = transmitted1*cal(2);   % calculate strains from signals
     %
     figure (1)
     clf(1)
@@ -34,8 +35,8 @@ function [Dispersed_signal,stressin,stressout,erate,strain] = SHPB_process(q,dis
     pause(0.00001)
     dt=time(2)-time(1);
 
-    signal_start = 500  %ind_start+L1/C0/dt;                              % may need to modify depending on the signal location
-    signal_end = 900    %signal_start+2*l_st/C0/dt ;                               % may need to modify depending on the signal location
+    signal_start = 500  %ind_start+L1/C0/dt;                              % may need to modify depending on the incident signal location after the incident signal has been moved forward
+    signal_end = 900    %signal_start+2*l_st/C0/dt ;                      % may need to modify depending on the signal location
 
 
 size(incident)
@@ -64,3 +65,4 @@ size(incident)
 
 
 end
+
