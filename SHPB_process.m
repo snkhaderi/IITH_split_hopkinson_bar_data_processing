@@ -1,4 +1,4 @@
-function [Dispersed_signal,stressin,stressout,erate,strain] = SHPB_process(q,distance_in,distance_ref,distance_out, C0,a,amp,Ebar,Values,f_cutt)
+function [Dispersed_signal,stressin,stressout,erate,strain] = SHPB_process(q,distance_in,distance_ref,distance_out, C0,a,amp,Ebar,Values,f_cutt, V_app, GF)
 
 % % q is the array containing signals
 % % first coulmn time
@@ -65,4 +65,5 @@ size(incident)
 
 
 end
+
 
